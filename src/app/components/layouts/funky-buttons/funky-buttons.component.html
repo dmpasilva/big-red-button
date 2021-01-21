@@ -1,0 +1,5 @@
+<div class="buttons-area">
+  <app-button *ngFor="let number of numbers; let idx = index" class="funky" [id]="'funky' + number" [buttonSize]="sizes.INHERIT"
+              [active]="idx === 10"></app-button>
+  <app-button class="funky" id="funky15" [buttonSize]="sizes.MEDIUM"></app-button>
+</div>

@@ -1,0 +1,13 @@
+app-game-area {
+  height: inherit;
+
+  .game-area {
+    height: inherit;
+    position: relative;
+  }
+
+  .white-button {
+    position: absolute;
+    top: 50px;
+  }
+}

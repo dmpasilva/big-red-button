@@ -1,0 +1,40 @@
+app-root {
+  height: inherit;
+
+  .app-area {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    position: relative;
+  }
+
+  .cheater-message {
+    position: absolute;
+    top: 100px;
+    color: white;
+  }
+
+  .game-area,
+  .messages-area {
+    height: 100%;
+    width: 100%;
+  }
+
+  .header,
+  .footer {
+    position: fixed;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header {
+    top: 0;
+    background: #eee;
+  }
+
+  .footer {
+    bottom: 0;
+    border-top: 1px solid #eee;
+  }
+}

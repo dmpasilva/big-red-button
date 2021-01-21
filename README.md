@@ -1,6 +1,18 @@
-# BigRedButton
+# The Big Red Button _in Angular_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
+![](screenshot.png)
+
+
+The Big Red Button is a text-based "adventure" (let's call it like that) initially developed by an unknown author
+in Adobe Flash. Several translations and adaptations of this project existed back in its original days (2008? 2010? I'm not sure).
+
+[jklewa](https://github.com/jklewa/big-red-button) went through every frame of the BigRedButton.swf
+the same way everyone else did and copied everything over as accurately as they could from Flash to JavaScript.
+
+The objective of this project is to adapt the code to support new devices with new screen sizes and follow new web standards to keep The Big Red Button alive
+and translated into several languages.
+
+The website may not be displayed correctly in all screen resolutions.
 
 ## Development server
 

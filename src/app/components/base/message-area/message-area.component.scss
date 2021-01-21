@@ -1,0 +1,31 @@
+app-message-area {
+  height: 100%;
+
+  p {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  .upside-down {
+    transform: rotate(-180deg);
+
+
+    /* Legacy vendor prefixes that you probably don't need... */
+
+    /* Safari */
+    -webkit-transform: rotate(-180deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-180deg);
+
+    /* IE */
+    -ms-transform: rotate(-180deg);
+
+    /* Opera */
+    -o-transform: rotate(-180deg);
+
+  }
+}
