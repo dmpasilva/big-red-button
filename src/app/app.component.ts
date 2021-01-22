@@ -10,6 +10,14 @@ import { AppService } from './services/app.service';
 export class AppComponent implements OnInit {
 
   constructor(private appService: AppService) {
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      window.document.addEventListener('touchmove', (e: any) => {
+        if (e.scale !== 1) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+    }
+
   }
 
   ngOnInit() {
