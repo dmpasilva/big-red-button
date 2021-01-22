@@ -1,9 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+@media only screen and (min-device-width: 300px) and (max-device-width: 667px) {
+  /* STYLES GO HERE */
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 668px) {
+  /* STYLES GO HERE */
+  html {
+    font-size: 17px;
+  }
+}
+
 html {
   height: 100vh;
   width: 100vw;
-  font-size: 17px;
   font-family: 'Roboto', sans-serif;
 }
 

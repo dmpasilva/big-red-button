@@ -1,26 +1,59 @@
+@media only screen and (min-device-width: 300px) and (max-device-width: 667px) {
+  /* STYLES GO HERE */
+  .button {
+    width: 6rem;
+    height: 6rem;
+
+    &--normal {
+    }
+
+    &--small {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &--medium {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &--tinny {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 668px) {
+  /* STYLES GO HERE */
+  .button {
+    width: 12rem;
+    height: 12rem;
+
+    &--normal {
+    }
+
+    &--small {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &--medium {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    &--tinny {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
 .button {
-  width: 12rem;
-  height: 12rem;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-
-  &--normal {}
-
-  &--small {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  &--medium {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  &--tinny {
-    width: 1rem;
-    height: 1rem;
-  }
 
   &--inherit {
     width: inherit;
@@ -68,7 +101,7 @@
     .mouth {
       position: absolute;
       z-index: 1;
-      bottom: 3rem;
+      bottom: 15%;
       left: 0;
       right: 0;
       height: 3rem;

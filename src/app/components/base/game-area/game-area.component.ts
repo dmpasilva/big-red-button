@@ -21,7 +21,7 @@ export class GameAreaComponent implements OnInit, OnDestroy {
   whiteButtonClicked = false;
   buttonColor = ButtonColor.DEFAULT;
 
-  currentIdx = 0;
+  currentIdx = 73;
   screen = Screens.SINGLE;
   screens = Screens;
 

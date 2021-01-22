@@ -1,17 +1,18 @@
 <div class="app-area" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center">
-
   <app-header class="header"></app-header>
+
+  <div class="game-area" fxFlex fxLayoutAlign="center center">
+    <app-game-area></app-game-area>
+  </div>
+
+  <div class="messages-area" fxLayoutAlign="center start" fxFlex="30">
+    <app-message-area ></app-message-area>
+  </div>
 
   <div class="cheater-message">
     <p>Well aren't you a little cheater,</p>
     <p>changing the background color like that.</p>
   </div>
-  <div class="game-area" fxFlex="80">
-    <app-game-area></app-game-area>
-  </div>
-
-  <div class="messages-area" fxFlex="20" fxLayoutAlign="center start">
-    <app-message-area ></app-message-area>
-  </div>
-  <app-footer class="footer"></app-footer>
 </div>
+
+<app-footer class="footer"></app-footer>

@@ -8,8 +8,21 @@ app-single-button {
     height: inherit;
   }
 
+  @media only screen and (min-device-width: 300px) and (max-device-width: 667px) {
+    /* STYLES GO HERE */
+    .animate {
+      animation: translate 5s infinite;
+    }
+  }
+
+  @media only screen and (min-device-width: 668px) {
+    /* STYLES GO HERE */
+    .animate {
+      animation: translate 2s infinite;
+    }
+  }
+
   .animate {
-    animation: translate 2s infinite;
     animation-timing-function: linear;
     animation-direction: normal;
     transition-timing-function: linear;
