@@ -46,7 +46,7 @@ export class GameAreaComponent implements OnInit, OnDestroy {
         }),
       this.appService.onLanguageChange()
         .subscribe(() => this.reset())
-    )
+    );
   }
 
   onNext() {
