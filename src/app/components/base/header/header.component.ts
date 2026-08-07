@@ -4,11 +4,10 @@ import { AppService } from '../../../services/app.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  standalone: false
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private subscriptions = [];
+  private subscriptions: any[] = [];
   title = 'The Big Red Button';
 
   constructor(private appService: AppService) { }
@@ -20,11 +19,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     );
   }
 
-  changeLanguage(lang) {
+  changeLanguage(lang: string) {
     this.appService.changeLanguage(lang);
   }
 
-  languageChanged(lang) {
+  languageChanged(lang: string) {
     switch (lang) {
       case 'pt':
         this.title = 'O Grande Botão Vermelho';

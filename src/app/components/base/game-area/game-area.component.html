@@ -1,28 +1,34 @@
 <div class="game-area">
-  <app-button class="white-button"
-              *ngIf="showWhiteButton && !whiteButtonClicked"
-              [buttonColor]="colors.WHITE"
-              [buttonSize]="sizes.TINNY"
-              [isWhite]="true"></app-button>
+  @if (showWhiteButton && !whiteButtonClicked) {
+    <app-button class="white-button"
+                [buttonColor]="colors.WHITE"
+                [buttonSize]="sizes.TINNY"
+                [isWhite]="true"></app-button>
+  }
 
-  <app-single-button *ngIf="screen === screens.SINGLE"
-                     [size]="buttonSize"
-                     [color]="buttonColor"
-                     [animate]="animate"
-                     [hidden]="hidden"
-  ></app-single-button>
+  @if (screen === screens.SINGLE) {
+    <app-single-button [size]="buttonSize"
+                       [color]="buttonColor"
+                       [animate]="animate"
+                       [hidden]="hidden"
+    ></app-single-button>
+  }
 
-  <app-three-buttons *ngIf="screen === screens.THREE_BUTTONS"
-                     [activeIdx]="activeIdx"
-                     [threeColors]="threeColors"
-  ></app-three-buttons>
+  @if (screen === screens.THREE_BUTTONS) {
+    <app-three-buttons [activeIdx]="activeIdx"
+                       [threeColors]="threeColors"
+    ></app-three-buttons>
+  }
 
-  <app-multiple-buttons *ngIf="screen === screens.MULTIPLE_BUTTONS">
-  </app-multiple-buttons>
+  @if (screen === screens.MULTIPLE_BUTTONS) {
+    <app-multiple-buttons></app-multiple-buttons>
+  }
 
-  <app-even-more-buttons *ngIf="screen === screens.EVEN_MORE_BUTTONS">
-  </app-even-more-buttons>
+  @if (screen === screens.EVEN_MORE_BUTTONS) {
+    <app-even-more-buttons></app-even-more-buttons>
+  }
 
-  <app-funky-buttons *ngIf="screen === screens.FUNKY_BUTTONS">
-  </app-funky-buttons>
+  @if (screen === screens.FUNKY_BUTTONS) {
+    <app-funky-buttons></app-funky-buttons>
+  }
 </div>

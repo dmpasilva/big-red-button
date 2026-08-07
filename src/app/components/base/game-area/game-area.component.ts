@@ -4,16 +4,29 @@ import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
 import * as msgs from '../../../../assets/messages/en.json';
 import { Screens } from './screens';
+import { ButtonComponent } from '../button/button.component';
+import { SingleButtonComponent } from '../../layouts/single-button/single-button.component';
+import { ThreeButtonsComponent } from '../../layouts/three-buttons/three-buttons.component';
+import { MultipleButtonsComponent } from '../../layouts/multiple-buttons/multiple-buttons.component';
+import { EvenMoreButtonsComponent } from '../../layouts/even-more-buttons/even-more-buttons.component';
+import { FunkyButtonsComponent } from '../../layouts/funky-buttons/funky-buttons.component';
 
 @Component({
   selector: 'app-game-area',
   templateUrl: './game-area.component.html',
   styleUrls: ['./game-area.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    ButtonComponent,
+    SingleButtonComponent,
+    ThreeButtonsComponent,
+    MultipleButtonsComponent,
+    EvenMoreButtonsComponent,
+    FunkyButtonsComponent
+  ]
 })
 export class GameAreaComponent implements OnInit, OnDestroy {
-  private subscriptions = [];
+  private subscriptions: any[] = [];
   private allMessages: any[] = (msgs as any).default;
 
   sizes = ButtonSize;
@@ -142,7 +155,7 @@ export class GameAreaComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscriptions.forEach(sub => sub.unsubscribe);
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
 }

@@ -1,18 +1,19 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { AppService } from '../../../services/app.service';
-import * as msgs from '../../../../assets/messages/en.json'
-import * as msgsPt from '../../../../assets/messages/pt.json'
+import * as msgs from '../../../../assets/messages/en.json';
+import * as msgsPt from '../../../../assets/messages/pt.json';
 
 @Component({
   selector: 'app-message-area',
   templateUrl: './message-area.component.html',
   styleUrls: ['./message-area.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [NgClass]
 })
 export class MessageAreaComponent implements OnInit, OnDestroy {
   private allMessages: any[] = (msgs as any).default;
-  private subscriptions = [];
+  private subscriptions: any[] = [];
   private messageIdx = 0;
   message = this.allMessages[this.messageIdx];
   private easterEggMessage = 'eek! You found me!';
@@ -36,7 +37,7 @@ export class MessageAreaComponent implements OnInit, OnDestroy {
     );
   }
 
-  changeLanguage(lang) {
+  changeLanguage(lang: string) {
     if (lang === 'pt') {
       this.allMessages = (msgsPt as any).default;
       this.easterEggMessage = 'Yay! Encontraste-me!';

@@ -1,12 +1,21 @@
-import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppService } from './services/app.service';
+import { HeaderComponent } from './components/base/header/header.component';
+import { GameAreaComponent } from './components/base/game-area/game-area.component';
+import { MessageAreaComponent } from './components/base/message-area/message-area.component';
+import { FooterComponent } from './components/base/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    HeaderComponent,
+    GameAreaComponent,
+    MessageAreaComponent,
+    FooterComponent
+  ]
 })
 export class AppComponent implements OnInit {
 
@@ -22,8 +31,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*setInterval(() => {
-      this.appService.next();
-    }, 1000);*/
   }
 }
