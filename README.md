@@ -1,5 +1,10 @@
 # The Big Red Button _in Angular_
 
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
 ![](screenshot.png)
 
 The Big Red Button is a text-based "adventure" (let's call it like that) initially developed by an unknown author

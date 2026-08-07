@@ -18,10 +18,7 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

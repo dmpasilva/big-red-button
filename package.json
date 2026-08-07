@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "compile": "ng build",
     "test": "ng test",
     "lint": "eslint .",
     "format": "prettier --write .",
