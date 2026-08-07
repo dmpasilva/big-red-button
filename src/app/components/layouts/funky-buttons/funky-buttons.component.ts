@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonComponent } from '../../base/button/button.component';
 
@@ -7,6 +7,7 @@ import { ButtonComponent } from '../../base/button/button.component';
   templateUrl: './funky-buttons.component.html',
   styleUrls: ['./funky-buttons.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ButtonComponent]
 })
 export class FunkyButtonsComponent implements OnInit {

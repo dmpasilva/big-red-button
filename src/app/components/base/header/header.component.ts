@@ -1,10 +1,11 @@
-import { Component, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
 import { AppService } from '../../../services/app.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
   readonly title = computed(() => {

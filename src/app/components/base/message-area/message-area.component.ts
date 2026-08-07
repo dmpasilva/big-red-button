@@ -1,4 +1,4 @@
-import { Component, computed, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, ViewEncapsulation } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { AppService } from '../../../services/app.service';
 import * as msgsEn from '../../../../assets/messages/en.json';
@@ -9,6 +9,7 @@ import * as msgsPt from '../../../../assets/messages/pt.json';
   templateUrl: './message-area.component.html',
   styleUrls: ['./message-area.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass]
 })
 export class MessageAreaComponent {

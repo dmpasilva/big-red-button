@@ -1,4 +1,4 @@
-import { Component, input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, ViewEncapsulation } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
@@ -9,6 +9,7 @@ import { ButtonComponent } from '../../base/button/button.component';
   templateUrl: './single-button.component.html',
   styleUrls: ['./single-button.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass, ButtonComponent]
 })
 export class SingleButtonComponent {

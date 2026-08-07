@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
@@ -8,6 +8,7 @@ import { AppService } from '../../../services/app.service';
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass]
 })
 export class ButtonComponent {

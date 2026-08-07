@@ -1,4 +1,4 @@
-import { Component, effect, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, ViewEncapsulation } from '@angular/core';
 import { AppService } from '../../../services/app.service';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
@@ -15,6 +15,7 @@ import { FunkyButtonsComponent } from '../../layouts/funky-buttons/funky-buttons
   templateUrl: './game-area.component.html',
   styleUrls: ['./game-area.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     ButtonComponent,
     SingleButtonComponent,
