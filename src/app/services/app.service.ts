@@ -4,7 +4,7 @@ import * as msgs from '../../assets/messages/en.json';
 
 @Injectable({ providedIn: 'root' })
 export class AppService {
-  private allMessages: any[] = (msgs as any).default;
+  private allMessages: string[] = (msgs as unknown as { default: string[] }).default;
   
   // Signals
   readonly languageSignal = signal<string>('en');

@@ -48,11 +48,11 @@ app-root {
 
   .header {
     top: 0;
-    background: #eee;
+    background: var(--header-bg);
   }
 
   .footer {
     bottom: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--footer-border);
   }
 }

@@ -1,4 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Modern CSS Custom Properties Design Tokens */
+:root {
+  --header-bg: #eee;
+  --footer-border: #eee;
+  --font-family-base: 'Roboto', sans-serif;
+  --text-color: #333;
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -21,7 +27,7 @@
 html {
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family-base);
   overflow-x: hidden;
 }
 
@@ -36,4 +42,5 @@ body {
   -ms-user-select: none;
   user-select: none;
   overflow-x: hidden;
+  color: var(--text-color);
 }

@@ -24,8 +24,8 @@ export class MessageAreaComponent {
         : 'eek! You found me!';
     }
     const allMessages: string[] = this.appService.languageSignal() === 'pt'
-      ? (msgsPt as any).default
-      : (msgsEn as any).default;
+      ? (msgsPt as unknown as { default: string[] }).default
+      : (msgsEn as unknown as { default: string[] }).default;
     const idx = this.appService.messageIdxSignal();
     return allMessages[idx] || '';
   });
