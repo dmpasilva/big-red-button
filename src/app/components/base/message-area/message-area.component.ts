@@ -7,7 +7,8 @@ import * as msgsPt from '../../../../assets/messages/pt.json'
   selector: 'app-message-area',
   templateUrl: './message-area.component.html',
   styleUrls: ['./message-area.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class MessageAreaComponent implements OnInit, OnDestroy {
   private allMessages: any[] = (msgs as any).default;

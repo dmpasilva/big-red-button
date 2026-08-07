@@ -5,7 +5,8 @@ import { ButtonSize } from '../../../common/button-size';
   selector: 'app-funky-buttons',
   templateUrl: './funky-buttons.component.html',
   styleUrls: ['./funky-buttons.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class FunkyButtonsComponent implements OnInit {
   sizes = ButtonSize;

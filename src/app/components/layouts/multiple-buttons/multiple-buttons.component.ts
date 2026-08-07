@@ -4,7 +4,8 @@ import { ButtonSize } from '../../../common/button-size';
 @Component({
   selector: 'app-multiple-buttons',
   templateUrl: './multiple-buttons.component.html',
-  styleUrls: ['./multiple-buttons.component.scss']
+  styleUrls: ['./multiple-buttons.component.scss'],
+  standalone: false
 })
 export class MultipleButtonsComponent implements OnInit {
 

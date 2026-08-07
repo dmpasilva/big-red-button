@@ -6,7 +6,8 @@ import { ButtonColor } from '../../../common/button-color';
   selector: 'app-single-button',
   templateUrl: './single-button.component.html',
   styleUrls: ['./single-button.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class SingleButtonComponent implements OnInit {
 

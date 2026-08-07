@@ -9,7 +9,8 @@ import { Screens } from './screens';
   selector: 'app-game-area',
   templateUrl: './game-area.component.html',
   styleUrls: ['./game-area.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class GameAreaComponent implements OnInit, OnDestroy {
   private subscriptions = [];

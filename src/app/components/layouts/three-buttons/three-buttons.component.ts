@@ -4,7 +4,8 @@ import { ButtonColor } from '../../../common/button-color';
 @Component({
   selector: 'app-three-buttons',
   templateUrl: './three-buttons.component.html',
-  styleUrls: ['./three-buttons.component.scss']
+  styleUrls: ['./three-buttons.component.scss'],
+  standalone: false
 })
 export class ThreeButtonsComponent implements OnInit {
   @Input()
