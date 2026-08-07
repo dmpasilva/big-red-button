@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
@@ -10,31 +10,22 @@ import { AppService } from '../../../services/app.service';
   styleUrls: ['./button.component.scss'],
   imports: [NgClass]
 })
-export class ButtonComponent implements OnInit {
-  @Input()
-  buttonSize = ButtonSize.NORMAL;
-  @Input()
-  buttonColor = ButtonColor.DEFAULT;
-  @Input()
-  active = false;
-  @Input()
-  isWhite = false;
-  @Input()
-  hidden = false;
+export class ButtonComponent {
+  buttonSize = input<ButtonSize>(ButtonSize.NORMAL);
+  buttonColor = input<ButtonColor>(ButtonColor.DEFAULT);
+  active = input<boolean>(false);
+  isWhite = input<boolean>(false);
+  hidden = input<boolean>(false);
 
   constructor(private appService: AppService) { }
 
-  ngOnInit(): void {
-  }
-
   onClick() {
-    if (this.active) {
+    if (this.active()) {
       this.appService.next();
     }
 
-    if (this.isWhite) {
+    if (this.isWhite()) {
       this.appService.whiteButton();
     }
   }
-
 }

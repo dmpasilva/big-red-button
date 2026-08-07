@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ButtonColor } from '../../../common/button-color';
 import { ButtonComponent } from '../../base/button/button.component';
 
@@ -8,16 +8,8 @@ import { ButtonComponent } from '../../base/button/button.component';
   styleUrls: ['./three-buttons.component.scss'],
   imports: [ButtonComponent]
 })
-export class ThreeButtonsComponent implements OnInit {
-  @Input()
-  activeIdx = 0;
-  @Input()
-  threeColors = false;
+export class ThreeButtonsComponent {
+  activeIdx = input<number>(0);
+  threeColors = input<boolean>(false);
   colors = ButtonColor;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

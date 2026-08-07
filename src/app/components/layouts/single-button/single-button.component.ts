@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
@@ -11,22 +11,10 @@ import { ButtonComponent } from '../../base/button/button.component';
   encapsulation: ViewEncapsulation.None,
   imports: [NgClass, ButtonComponent]
 })
-export class SingleButtonComponent implements OnInit {
-
-  @Input()
-  animate = false;
-  @Input()
-  size = ButtonSize.NORMAL;
-  @Input()
-  penguin = false;
-  @Input()
-  hidden = false;
-  @Input()
-  color = ButtonColor.DEFAULT;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SingleButtonComponent {
+  animate = input<boolean>(false);
+  size = input<ButtonSize>(ButtonSize.NORMAL);
+  penguin = input<boolean>(false);
+  hidden = input<boolean>(false);
+  color = input<ButtonColor>(ButtonColor.DEFAULT);
 }

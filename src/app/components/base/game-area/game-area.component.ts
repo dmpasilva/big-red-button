@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, effect, ViewEncapsulation } from '@angular/core';
 import { AppService } from '../../../services/app.service';
 import { ButtonSize } from '../../../common/button-size';
 import { ButtonColor } from '../../../common/button-color';
-import * as msgs from '../../../../assets/messages/en.json';
 import { Screens } from './screens';
 import { ButtonComponent } from '../button/button.component';
 import { SingleButtonComponent } from '../../layouts/single-button/single-button.component';
@@ -25,50 +24,38 @@ import { FunkyButtonsComponent } from '../../layouts/funky-buttons/funky-buttons
     FunkyButtonsComponent
   ]
 })
-export class GameAreaComponent implements OnInit, OnDestroy {
-  private subscriptions: any[] = [];
-  private allMessages: any[] = (msgs as any).default;
-
+export class GameAreaComponent {
   sizes = ButtonSize;
   colors = ButtonColor;
   showWhiteButton = false;
-  whiteButtonClicked = false;
   buttonColor = ButtonColor.DEFAULT;
 
-  currentIdx = 0;
   screen = Screens.SINGLE;
   screens = Screens;
 
-  // for animation
   animate = false;
-  // for three buttons stages
   threeColors = false;
-  // for multiple buttons
   activeIdx = 0;
   buttonSize = ButtonSize.NORMAL;
   hidden = false;
 
-  constructor(private appService: AppService) { }
-
-  ngOnInit(): void {
-    this.subscriptions.push(
-      this.appService.onNext()
-        .subscribe(() => this.onNext()),
-      this.appService.onWhiteButton()
-        .subscribe(() => {
-          this.onWhiteButtonClick();
-        }),
-      this.appService.onLanguageChange()
-        .subscribe(() => this.reset())
-    );
+  get whiteButtonClicked() {
+    return this.appService.whiteButtonClickedSignal();
   }
 
-  onNext() {
-    this.currentIdx += 1;
-    if (this.currentIdx >= this.allMessages.length) {
-      this.reset();
+  constructor(public appService: AppService) {
+    effect(() => {
+      const currentIdx = this.appService.messageIdxSignal();
+      this.updateStateForIndex(currentIdx);
+    });
+  }
+
+  updateStateForIndex(currentIdx: number) {
+    if (currentIdx === 0) {
+      this.resetState();
+      return;
     }
-    switch (this.currentIdx) {
+    switch (currentIdx) {
       case 11:
         this.buttonSize = ButtonSize.SMALL;
         break;
@@ -138,8 +125,7 @@ export class GameAreaComponent implements OnInit, OnDestroy {
     }
   }
 
-  reset() {
-    this.currentIdx = 0;
+  resetState() {
     this.screen = Screens.SINGLE;
     this.animate = false;
     this.threeColors = false;
@@ -149,13 +135,4 @@ export class GameAreaComponent implements OnInit, OnDestroy {
     this.buttonColor = ButtonColor.DEFAULT;
     this.hidden = false;
   }
-
-  onWhiteButtonClick() {
-    this.whiteButtonClicked = true;
-  }
-
-  ngOnDestroy() {
-    this.subscriptions.forEach(sub => sub.unsubscribe());
-  }
-
 }

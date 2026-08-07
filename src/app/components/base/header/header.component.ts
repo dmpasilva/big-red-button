@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, computed } from '@angular/core';
 import { AppService } from '../../../services/app.service';
 
 @Component({
@@ -6,36 +6,16 @@ import { AppService } from '../../../services/app.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
-  private subscriptions: any[] = [];
-  title = 'The Big Red Button';
+export class HeaderComponent {
+  readonly title = computed(() => {
+    return this.appService.languageSignal() === 'pt'
+      ? 'O Grande Botão Vermelho'
+      : 'The Big Red Button';
+  });
 
   constructor(private appService: AppService) { }
-
-  ngOnInit(): void {
-    this.subscriptions.push(
-      this.appService.onLanguageChange()
-        .subscribe(lang => this.languageChanged(lang))
-    );
-  }
 
   changeLanguage(lang: string) {
     this.appService.changeLanguage(lang);
   }
-
-  languageChanged(lang: string) {
-    switch (lang) {
-      case 'pt':
-        this.title = 'O Grande Botão Vermelho';
-        break;
-      default:
-        this.title = 'The Big Red Button';
-        break;
-    }
-  }
-
-  ngOnDestroy() {
-    this.subscriptions.forEach(sub => sub.unsubscribe());
-  }
-
 }

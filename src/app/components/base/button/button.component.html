@@ -1,5 +1,5 @@
-<div [class]="'button button--' + buttonSize + ' button-' + buttonColor"
-     [ngClass]="{ 'hidden': hidden }"
+<div [class]="'button button--' + buttonSize() + ' button-' + buttonColor()"
+     [ngClass]="{ 'hidden': hidden() }"
      (click)="onClick()">
   <div class="eye left"></div>
   <div class="eye right"></div>
