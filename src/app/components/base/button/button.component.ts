@@ -18,7 +18,7 @@ export class ButtonComponent {
   isWhite = input<boolean>(false);
   hidden = input<boolean>(false);
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService) {}
 
   onClick() {
     if (this.active()) {

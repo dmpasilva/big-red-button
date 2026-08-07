@@ -1,23 +1,24 @@
 <div class="game-area">
   @if (showWhiteButton && !whiteButtonClicked) {
-    <app-button class="white-button"
-                [buttonColor]="colors.WHITE"
-                [buttonSize]="sizes.TINNY"
-                [isWhite]="true"></app-button>
+    <app-button
+      class="white-button"
+      [buttonColor]="colors.WHITE"
+      [buttonSize]="sizes.TINNY"
+      [isWhite]="true"
+    ></app-button>
   }
 
   @if (screen === screens.SINGLE) {
-    <app-single-button [size]="buttonSize"
-                       [color]="buttonColor"
-                       [animate]="animate"
-                       [hidden]="hidden"
+    <app-single-button
+      [size]="buttonSize"
+      [color]="buttonColor"
+      [animate]="animate"
+      [hidden]="hidden"
     ></app-single-button>
   }
 
   @if (screen === screens.THREE_BUTTONS) {
-    <app-three-buttons [activeIdx]="activeIdx"
-                       [threeColors]="threeColors"
-    ></app-three-buttons>
+    <app-three-buttons [activeIdx]="activeIdx" [threeColors]="threeColors"></app-three-buttons>
   }
 
   @if (screen === screens.MULTIPLE_BUTTONS) {

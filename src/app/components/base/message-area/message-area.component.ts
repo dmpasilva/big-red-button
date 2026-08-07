@@ -24,9 +24,10 @@ export class MessageAreaComponent {
         ? 'Yay! Encontraste-me!'
         : 'eek! You found me!';
     }
-    const allMessages: string[] = this.appService.languageSignal() === 'pt'
-      ? (msgsPt as unknown as { default: string[] }).default
-      : (msgsEn as unknown as { default: string[] }).default;
+    const allMessages: string[] =
+      this.appService.languageSignal() === 'pt'
+        ? (msgsPt as unknown as { default: string[] }).default
+        : (msgsEn as unknown as { default: string[] }).default;
     const idx = this.appService.messageIdxSignal();
     return allMessages[idx] || '';
   });

@@ -2,7 +2,6 @@
 
 ![](screenshot.png)
 
-
 The Big Red Button is a text-based "adventure" (let's call it like that) initially developed by an unknown author
 in Adobe Flash. Several translations and adaptations of this project existed back in its original days (2008? 2010? I'm not sure).
 

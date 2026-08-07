@@ -15,10 +15,10 @@ export class FunkyButtonsComponent implements OnInit {
   numbers: number[] = [];
 
   constructor() {
-    this.numbers = Array(16).fill(0).map((x, i) => i);
+    this.numbers = Array(16)
+      .fill(0)
+      .map((x, i) => i);
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

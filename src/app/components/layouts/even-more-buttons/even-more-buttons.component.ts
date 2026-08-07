@@ -10,12 +10,9 @@ import { ButtonComponent } from '../../base/button/button.component';
   imports: [ButtonComponent]
 })
 export class EvenMoreButtonsComponent implements OnInit {
-
   buttonSize = ButtonSize.SMALL;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

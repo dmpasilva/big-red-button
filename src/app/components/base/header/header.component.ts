@@ -14,7 +14,7 @@ export class HeaderComponent {
       : 'The Big Red Button';
   });
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService) {}
 
   changeLanguage(lang: string) {
     this.appService.changeLanguage(lang);

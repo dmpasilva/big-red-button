@@ -11,27 +11,23 @@ import { FooterComponent } from './components/base/footer/footer.component';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    HeaderComponent,
-    GameAreaComponent,
-    MessageAreaComponent,
-    FooterComponent
-  ]
+  imports: [HeaderComponent, GameAreaComponent, MessageAreaComponent, FooterComponent]
 })
 export class AppComponent implements OnInit {
-
   constructor(private appService: AppService) {
     if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      window.document.addEventListener('touchmove', (e: TouchEvent) => {
-        const touchEvent = e as unknown as { scale?: number };
-        if (touchEvent.scale !== 1) {
-          e.preventDefault();
-        }
-      }, { passive: false });
+      window.document.addEventListener(
+        'touchmove',
+        (e: TouchEvent) => {
+          const touchEvent = e as unknown as { scale?: number };
+          if (touchEvent.scale !== 1) {
+            e.preventDefault();
+          }
+        },
+        { passive: false }
+      );
     }
-
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

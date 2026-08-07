@@ -6,7 +6,9 @@
   --text-color: #333;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

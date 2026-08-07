@@ -8,9 +8,8 @@ describe('MessageAreaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MessageAreaComponent ]
-    })
-    .compileComponents();
+      declarations: [MessageAreaComponent]
+    }).compileComponents();
   });
 
   beforeEach(() => {

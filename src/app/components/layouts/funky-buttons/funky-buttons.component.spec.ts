@@ -8,9 +8,8 @@ describe('FunkyButtonsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FunkyButtonsComponent ]
-    })
-    .compileComponents();
+      declarations: [FunkyButtonsComponent]
+    }).compileComponents();
   });
 
   beforeEach(() => {

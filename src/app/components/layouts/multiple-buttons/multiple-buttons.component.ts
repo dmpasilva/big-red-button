@@ -10,12 +10,9 @@ import { ButtonComponent } from '../../base/button/button.component';
   imports: [ButtonComponent]
 })
 export class MultipleButtonsComponent implements OnInit {
-
   mediumSize = ButtonSize.MEDIUM;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

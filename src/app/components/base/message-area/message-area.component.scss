@@ -12,7 +12,6 @@ app-message-area {
   .upside-down {
     transform: rotate(-180deg);
 
-
     /* Legacy vendor prefixes that you probably don't need... */
 
     /* Safari */
@@ -26,6 +25,5 @@ app-message-area {
 
     /* Opera */
     -o-transform: rotate(-180deg);
-
   }
 }
