@@ -6,6 +6,10 @@ app-single-button {
 
   .button-area {
     height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 667px) {

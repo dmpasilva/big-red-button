@@ -22,7 +22,6 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/favicon.png",
               "src/assets"
@@ -65,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "big-red-button:build"
+            "buildTarget": "big-red-button:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "big-red-button:build:production"
+              "buildTarget": "big-red-button:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "big-red-button:build"
+            "buildTarget": "big-red-button:build"
           }
         },
         "test": {
@@ -95,34 +94,8 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "big-red-button:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "big-red-button:serve:production"
-            }
-          }
         }
       }
     }
-  },
-  "defaultProject": "big-red-button"
+  }
 }

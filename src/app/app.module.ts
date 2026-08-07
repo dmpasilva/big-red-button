@@ -10,7 +10,6 @@ import { ThreeButtonsComponent } from './components/layouts/three-buttons/three-
 import { MultipleButtonsComponent } from './components/layouts/multiple-buttons/multiple-buttons.component';
 import { EvenMoreButtonsComponent } from './components/layouts/even-more-buttons/even-more-buttons.component';
 import { FunkyButtonsComponent } from './components/layouts/funky-buttons/funky-buttons.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './components/base/footer/footer.component';
 import { HeaderComponent } from './components/base/header/header.component';
 
@@ -29,8 +28,7 @@ import { HeaderComponent } from './components/base/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule,
-    FlexLayoutModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

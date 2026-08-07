@@ -1,0 +1,11 @@
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

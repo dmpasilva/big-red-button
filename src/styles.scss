@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @media only screen and (min-device-width: 300px) and (max-device-width: 667px) {
   /* STYLES GO HERE */
   html {
@@ -18,6 +22,7 @@ html {
   height: 100vh;
   width: 100vw;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,4 +35,5 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow-x: hidden;
 }

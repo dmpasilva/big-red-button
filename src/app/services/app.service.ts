@@ -5,9 +5,9 @@ import * as msgs from '../../assets/messages/en.json';
 @Injectable({ providedIn: 'root' })
 export class AppService {
   private allMessages: any[] = (msgs as any).default;
-  private _next = new Subject();
-  private _whiteButton = new Subject();
-  private _language = new Subject();
+  private _next = new Subject<void>();
+  private _whiteButton = new Subject<void>();
+  private _language = new Subject<string>();
   private messageIdx = 0;
 
   next() {
